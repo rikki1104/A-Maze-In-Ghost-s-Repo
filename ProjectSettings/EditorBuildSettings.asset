@@ -1,0 +1,32 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1045 &1
+EditorBuildSettings:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/Menu Scenes/MainMenu/MainMenu.unity
+    guid: 1f39d144a25c5754ebde9e75964ca8d0
+  - enabled: 1
+    path: Assets/Scenes/The_Gardens_Lobby/The_Gardens_Lobby.unity
+    guid: fc6f70e2f17d8a5419f4dd8d3388d511
+  - enabled: 1
+    path: Assets/Scenes/Maze Scenes/The_Gardens_Zone_1/The_Gardens_Zone_1.unity
+    guid: 590cb76b6ae72454bb1b390d759c87e8
+  - enabled: 1
+    path: Assets/Scenes/Maze Scenes/The_Gardens_Zone_2/The_Gardens_Zone_2.unity
+    guid: 7c838c048ee16f44096e435bbdecfd10
+  - enabled: 1
+    path: Assets/Scenes/Maze Scenes/The_Gardens_Zone_3/The_Gardens_Zone_3.unity
+    guid: d98a3b298d3459b4fb60d1fa5fa62ed9
+  - enabled: 1
+    path: Assets/Scenes/Maze Scenes/The_Gardens_Zone_4/The_Gardens_Zone_4.unity
+    guid: 7b2f90cdb76d17c4da2ad06d58238e06
+  - enabled: 1
+    path: Assets/Scenes/Maze Scenes/The_Gardens_Zone_5/The_Gardens_Zone_5.unity
+    guid: f58cd34e98cac9641b261b296cf2020c
+  - enabled: 1
+    path: Assets/Scenes/Menu Scenes/GameCompletedScene/GameCompletedScene.unity
+    guid: 3babd900004cf3f41abaa0d0c8cad753
+  m_configObjects: {}
