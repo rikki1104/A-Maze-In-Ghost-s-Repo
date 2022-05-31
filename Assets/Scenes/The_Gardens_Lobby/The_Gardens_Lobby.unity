@@ -7675,6 +7675,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 454588261}
     m_Modifications:
+    - target: {fileID: 1029620458, guid: 6042cf8e18887cf458715367367c332f, type: 3}
+      propertyPath: m_Volume
+      value: 0.2
+      objectReference: {fileID: 0}
     - target: {fileID: 5445170340163667888, guid: 6042cf8e18887cf458715367367c332f, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
@@ -9025,6 +9029,7 @@ GameObject:
   - component: {fileID: 2581976450370441646}
   - component: {fileID: 4060564253726061378}
   - component: {fileID: 1406581111150218347}
+  - component: {fileID: 4596444115977257518}
   m_Layer: 0
   m_Name: Walls 4.001
   m_TagString: Untagged
@@ -9032,6 +9037,20 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!64 &4596444115977257518
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4596444115977257517}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 928675493389244067, guid: 59bd87af3585f7748bfb1af9af520787, type: 3}
 --- !u!1001 &4753827725982918755
 PrefabInstance:
   m_ObjectHideFlags: 0
