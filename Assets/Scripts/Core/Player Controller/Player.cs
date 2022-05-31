@@ -35,16 +35,9 @@ namespace Maze_Game.Core
         void Start()
         {
             _controller = GetComponent<CharacterController>();
-            #if UNITY_ANDROID
-            Cursor.visible = true;
-            Cursor.lockState = CursorLockMode.None;
-            #elif UNITY_IOS
-            Cursor.visible = true;
-            Cursor.lockState = CursorLockMode.None;
-            #else
+            
             Cursor.visible = false;
-            Cursor.lockState = CursorLockMode.Locked;
-            #endif            
+            Cursor.lockState = CursorLockMode.Locked;         
         }
 
         // Update is called once per frame

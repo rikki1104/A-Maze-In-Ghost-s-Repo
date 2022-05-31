@@ -22,11 +22,11 @@ namespace Maze_Game.Core
         // Update is called once per frame
         void Update()
         {
-        canRotate.x += CrossPlatformInputManager.GetAxis("Mouse Y") * cameraSmoothing * (-1);
+            canRotate.x += CrossPlatformInputManager.GetAxis("Mouse Y") * cameraSmoothing * (-1);
 
-        canRotate.x = Mathf.Clamp(canRotate.x, lookXMin, lookXMax);
+            canRotate.x = Mathf.Clamp(canRotate.x, lookXMin, lookXMax);
 
-        transform.localRotation = Quaternion.Euler(canRotate.x, canRotate.y, canRotate.z);
+            transform.localRotation = Quaternion.Euler(canRotate.x, canRotate.y, canRotate.z);
         }
     }
 }

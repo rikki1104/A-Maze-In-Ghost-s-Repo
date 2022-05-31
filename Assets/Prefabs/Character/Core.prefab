@@ -197,6 +197,10 @@ PrefabInstance:
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 117159180, guid: 322dc0d69628582428c45a9da56665df, type: 3}
+      propertyPath: _sensitivity
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 117159180, guid: 322dc0d69628582428c45a9da56665df, type: 3}
       propertyPath: maxBoostTime
       value: 5
       objectReference: {fileID: 0}
@@ -327,6 +331,14 @@ PrefabInstance:
     - target: {fileID: 5267565074097373962, guid: 322dc0d69628582428c45a9da56665df, type: 3}
       propertyPath: m_TagString
       value: MainCamera
+      objectReference: {fileID: 0}
+    - target: {fileID: 5696579309890066875, guid: 322dc0d69628582428c45a9da56665df, type: 3}
+      propertyPath: lookXMax
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 5696579309890066875, guid: 322dc0d69628582428c45a9da56665df, type: 3}
+      propertyPath: cameraSmoothing
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6490400207179082352, guid: 322dc0d69628582428c45a9da56665df, type: 3}
       propertyPath: m_Name

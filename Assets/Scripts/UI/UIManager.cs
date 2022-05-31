@@ -58,7 +58,7 @@ namespace Maze_Game.UI
                 LoadMainMenu();
             }
     
-            Cursor.lockState = lockCursor?CursorLockMode.Locked:CursorLockMode.None;
+            Cursor.lockState = CursorLockMode.None;
             Cursor.visible = !lockCursor;       
         }
 
