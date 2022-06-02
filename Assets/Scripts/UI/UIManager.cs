@@ -24,7 +24,6 @@ namespace Maze_Game.UI
     public bool pinkKeyCollected;
 
     public bool imageCollected = false;
-    public bool lockCursor = true;
 
     void Start()
     {
@@ -36,6 +35,7 @@ namespace Maze_Game.UI
                 purpleKeyCollected = SaveManager.instance.activeSave._hasPurpleKeyDataUI;
                 pinkKeyCollected = SaveManager.instance.activeSave._hasPinkKeyDataUI;
             }
+        Cursor.lockState = CursorLockMode.Locked;
     }
 
         void Update()
@@ -56,10 +56,7 @@ namespace Maze_Game.UI
             if (Input.GetKeyDown(KeyCode.Escape))
             {
                 LoadMainMenu();
-            }
-    
-            Cursor.lockState = CursorLockMode.None;
-            Cursor.visible = !lockCursor;       
+            }   
         }
 
         public void KeysButtonPressed()

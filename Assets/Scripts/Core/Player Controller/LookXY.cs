@@ -11,6 +11,8 @@ namespace Maze_Game.Core
         [SerializeField] float lookXMax = 45;
         [SerializeField] float lookXMin = -45;
 
+        float invertLookAxis = -1;
+
         private Quaternion canRotate;
 
         // Start is called before the first frame update
@@ -20,9 +22,9 @@ namespace Maze_Game.Core
         }
 
         // Update is called once per frame
-        void Update()
+        void FixedUpdate()
         {
-            canRotate.x += Input.GetAxis("Mouse Y") * cameraSmoothing * (-1);
+            canRotate.x += Input.GetAxis("Mouse Y") * cameraSmoothing * (invertLookAxis);
 
             canRotate.x = Mathf.Clamp(canRotate.x, lookXMin, lookXMax);
 

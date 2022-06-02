@@ -10,6 +10,11 @@ namespace Maze_Game.UI
         [SerializeField] GameObject settingsMenu;
         [SerializeField] GameObject mainMenu;
 
+        private void Start() 
+        {
+            Cursor.lockState = CursorLockMode.None;
+        }
+
 
         public void PlayGame()
         {
