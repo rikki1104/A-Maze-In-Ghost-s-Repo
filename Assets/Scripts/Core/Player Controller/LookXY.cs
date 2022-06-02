@@ -22,7 +22,7 @@ namespace Maze_Game.Core
         // Update is called once per frame
         void Update()
         {
-            canRotate.x += CrossPlatformInputManager.GetAxis("Mouse Y") * cameraSmoothing * (-1);
+            canRotate.x += Input.GetAxis("Mouse Y") * cameraSmoothing * (-1);
 
             canRotate.x = Mathf.Clamp(canRotate.x, lookXMin, lookXMax);
 

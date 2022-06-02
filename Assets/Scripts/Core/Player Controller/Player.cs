@@ -52,8 +52,8 @@ namespace Maze_Game.Core
 
         void CalculateMovement()
         {
-            float _horizontalInput = CrossPlatformInputManager.GetAxis("Horizontal");// Input.GetAxis("Horizontal");
-            float _verticalInput = CrossPlatformInputManager.GetAxis("Vertical"); // Input.GetAxis("Vertical");
+            float _horizontalInput = Input.GetAxis("Horizontal");
+            float _verticalInput = Input.GetAxis("Vertical");
 
             Vector3 _direction = new Vector3(_horizontalInput, 0, _verticalInput);
             Vector3 _velocity = _direction * _speed;
@@ -65,7 +65,7 @@ namespace Maze_Game.Core
 
         void LookX()
         {
-            float _mouseX = CrossPlatformInputManager.GetAxis("Mouse X");
+            float _mouseX = Input.GetAxis("Mouse X");
 
             Vector3 newRotation = transform.localEulerAngles;
             newRotation.y += _mouseX * _sensitivity;
@@ -74,7 +74,7 @@ namespace Maze_Game.Core
 
         public void Interact()
         {
-            if(CrossPlatformInputManager.GetButton("Fire"))
+            if(Input.GetButton("Fire"))
             {
                 Ray rayOrigin = Camera.main.ViewportPointToRay(new Vector3(0.5f, 0.5f, 0));
                 RaycastHit hitInfo;
@@ -83,12 +83,6 @@ namespace Maze_Game.Core
                 {
                     Debug.Log("Hit " + hitInfo.transform.name);
                 }
-            }
-            
-            if(Input.GetKeyDown(KeyCode.Escape))
-            {
-                Cursor.visible = true;
-                Cursor.lockState = CursorLockMode.None;
             }
         }
 
