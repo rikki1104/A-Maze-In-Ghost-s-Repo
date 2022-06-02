@@ -16,7 +16,7 @@ namespace Maze_Game.Core
 
         [Header("Movement")]
         [SerializeField] public float _speed = 3.5f;
-        [SerializeField] float _sensitivity = 1f;
+        [SerializeField] float _mouseXSensitivity = 1f;
 
         private float _gravity = 9.81f;       
 
@@ -44,10 +44,14 @@ namespace Maze_Game.Core
         void Update()
         {
             CalculateMovement();
-            LookX();
             Interact();
             SpeedPowerUp();
             SlowTrap();
+        }
+
+        private void LateUpdate() 
+        {
+            LookX();
         }
 
         void CalculateMovement()
@@ -68,7 +72,7 @@ namespace Maze_Game.Core
             float _mouseX = Input.GetAxis("Mouse X");
 
             Vector3 newRotation = transform.localEulerAngles;
-            newRotation.y += _mouseX * _sensitivity;
+            newRotation.y += _mouseX * _mouseXSensitivity;
             transform.localEulerAngles = newRotation;
         }
 

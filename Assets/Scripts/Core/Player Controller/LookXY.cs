@@ -22,7 +22,7 @@ namespace Maze_Game.Core
         }
 
         // Update is called once per frame
-        void FixedUpdate()
+        void LateUpdate()
         {
             canRotate.x += Input.GetAxis("Mouse Y") * cameraSmoothing * (invertLookAxis);
 

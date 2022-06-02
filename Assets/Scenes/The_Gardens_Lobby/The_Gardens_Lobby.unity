@@ -6148,6 +6148,14 @@ PrefabInstance:
       propertyPath: m_LocalRotation.z
       value: -0
       objectReference: {fileID: 0}
+    - target: {fileID: 2964666021759638186, guid: 9c1b8fe9da55b4b4f941d1e55929a1fb, type: 3}
+      propertyPath: _sensitivity
+      value: 0.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 2964666021759638186, guid: 9c1b8fe9da55b4b4f941d1e55929a1fb, type: 3}
+      propertyPath: _mouseXSensitivity
+      value: 0.4
+      objectReference: {fileID: 0}
     - target: {fileID: 3037722296401052138, guid: 9c1b8fe9da55b4b4f941d1e55929a1fb, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.000000026064525
@@ -6246,7 +6254,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7361921637149226525, guid: 9c1b8fe9da55b4b4f941d1e55929a1fb, type: 3}
       propertyPath: cameraSmoothing
-      value: 5
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7638421385256931599, guid: 9c1b8fe9da55b4b4f941d1e55929a1fb, type: 3}
       propertyPath: m_PresetInfoIsWorld
