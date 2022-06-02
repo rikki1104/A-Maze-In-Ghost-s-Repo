@@ -12,6 +12,7 @@ namespace Maze_Game.UI
 
         private void Start() 
         {
+            Cursor.visible = true;
             Cursor.lockState = CursorLockMode.None;
         }
 

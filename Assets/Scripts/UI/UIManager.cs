@@ -35,6 +35,7 @@ namespace Maze_Game.UI
                 purpleKeyCollected = SaveManager.instance.activeSave._hasPurpleKeyDataUI;
                 pinkKeyCollected = SaveManager.instance.activeSave._hasPinkKeyDataUI;
             }
+        Cursor.visible = false;
         Cursor.lockState = CursorLockMode.Locked;
     }
 
