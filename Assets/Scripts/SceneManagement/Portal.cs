@@ -34,7 +34,7 @@ namespace Maze_Game.SceneManagement
             Fader fader = FindObjectOfType<Fader>();
 
             yield return fader.FadeOut(fadeOutTime);
-            yield return SceneManager.LoadSceneAsync(sceneToLoad);
+            yield return SceneManager.LoadSceneAsync(sceneToLoad);            
             
             Portal otherPortal = GetOtherPortal();
             UpdatePlayer(otherPortal);

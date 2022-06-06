@@ -35,9 +35,6 @@ namespace Maze_Game.Core
         void Start()
         {
             _controller = GetComponent<CharacterController>();
-            
-            Cursor.visible = false;
-            Cursor.lockState = CursorLockMode.Locked;         
         }
 
         // Update is called once per frame

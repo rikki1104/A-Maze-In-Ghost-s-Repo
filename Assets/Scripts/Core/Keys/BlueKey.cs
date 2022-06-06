@@ -9,6 +9,7 @@ namespace Maze_Game.Core
     public class BlueKey : MonoBehaviour
     {
         [SerializeField] AudioSource _pickupAudio;
+        [SerializeField] GameObject exitLightBeam = null;
         
         public bool isCollected;
 
@@ -47,17 +48,28 @@ namespace Maze_Game.Core
         {           
             yield return new WaitForSeconds(1);
             isCollected = !isCollected;
-                        if(isCollected)
-                        {
-                            UIManager _uiManager = GameObject.Find("Canvas").GetComponent<UIManager>();
+            if(isCollected)
+            {
+                UIManager _uiManager = GameObject.Find("Canvas").GetComponent<UIManager>();
 
-                            if(_uiManager != null)
-                            {
-                                _uiManager.CollectedblueKey();
-                            }
-                            this.gameObject.SetActive(!isCollected);
-                            SaveManager.instance.activeSave._blueKeyData = isCollected;                                                                              
-                        }                             
+                if(_uiManager != null)
+                {
+                    _uiManager.CollectedblueKey();
+                }
+                this.gameObject.SetActive(!isCollected);
+                SaveManager.instance.activeSave._blueKeyData = isCollected;   
+
+                new WaitForSeconds(1);
+
+                if(isCollected)
+                {
+                    exitLightBeam.SetActive(true);
+                }
+                else
+                {
+                    exitLightBeam.SetActive(false);
+                }                                                                               
+            }                             
         }
     }
 }

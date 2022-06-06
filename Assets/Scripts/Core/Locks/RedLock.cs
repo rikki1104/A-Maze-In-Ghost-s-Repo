@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using UnityEngine;
 using Maze_Game.UI;
 using Maze_Game.Saving;
-using UnityStandardAssets.CrossPlatformInput;
 
 namespace Maze_Game.Core
 {
@@ -33,41 +32,17 @@ namespace Maze_Game.Core
         void OnTriggerStay(Collider other)
         {
             if(other.tag == "Player")
-            {
-                #if UNITY_ANDROID
-                if(Input.GetKeyDown(KeyCode.E) || CrossPlatformInputManager.GetButtonDown("Fire1") && SaveManager.instance.activeSave._redKeyData)
-                {                
-                        Player player = other.GetComponent<Player>();
-                        if(player !=null)
-                        {  
-                            _openAudio.Play();                             
-                            _anim.Play("LockAnim");                                                                                                 
-                            StartCoroutine(OpenRedLockAnim());
-                        }
-                }
-                #elif UNITY_IOS
-                if(Input.GetKeyDown(KeyCode.E) || CrossPlatformInputManager.GetButtonDown("Fire1") && SaveManager.instance.activeSave._redKeyData)
-                {                
-                        Player player = other.GetComponent<Player>();
-                        if(player !=null)
-                        {  
-                            _openAudio.Play();                             
-                            _anim.Play("LockAnim");                                                                                                 
-                            StartCoroutine(OpenRedLockAnim());
-                        }
-                }
-                #else
+            {  
                 if(Input.GetKeyDown(KeyCode.E) && SaveManager.instance.activeSave._redKeyData)
                 {                
-                        Player player = other.GetComponent<Player>();
-                        if(player !=null)
-                        {  
-                            _openAudio.Play();                             
-                            _anim.Play("LockAnim");                                                                                                 
-                            StartCoroutine(OpenRedLockAnim());
-                        }
-                }
-                #endif                                                            
+                    Player player = other.GetComponent<Player>();
+                    if(player !=null)
+                    {  
+                        _openAudio.Play();                             
+                        _anim.Play("LockAnim");                                                                                                 
+                        StartCoroutine(OpenRedLockAnim());
+                    }
+                }                                                         
             }
         }
 
@@ -89,7 +64,7 @@ namespace Maze_Game.Core
         
         IEnumerator OpenRedLockAnim()
         {          
-            yield return new WaitForSeconds(2f);
+            yield return new WaitForSeconds(1f);
             isOpen = !isOpen;
                 if(isOpen)
                 {                       

@@ -24,11 +24,6 @@ namespace Maze_Game.Core
             instance = this;
         }
 
-        void Start()
-        {
-            countDownTimer(); 
-        }
-
         void Update()
         {
             AddTime();
@@ -41,7 +36,7 @@ namespace Maze_Game.Core
             SceneManager.LoadScene(1);                       
         }
 
-        void countDownTimer()
+        public void countDownTimer()
         {
             if(countDownStartValue > 0)
             {

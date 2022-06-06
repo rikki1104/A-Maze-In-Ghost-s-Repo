@@ -20,6 +20,8 @@ namespace Maze_Game.UI
         public void PlayGame()
         {
             SceneManager.LoadScene(1);
+            Cursor.visible = false;
+            Cursor.lockState = CursorLockMode.None;
         }
 
         public void ExitGame()

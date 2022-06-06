@@ -22,30 +22,6 @@ namespace Maze_Game.Saving
             Load();        
         }
 
-        // Start is called before the first frame update
-        void Start()
-        {
-            
-        }
-
-        // Update is called once per frame
-        void Update()
-        {
-            if(Input.GetKeyDown(KeyCode.K))
-            {
-                Save();
-            }
-
-            if(Input.GetKeyDown(KeyCode.L))
-            {
-                Load();
-            }
-
-            if(Input.GetKeyDown(KeyCode.J))
-            {
-                DeleteSaveData();
-            }
-        }
 
         public void Save()
         {

@@ -1,10 +1,10 @@
 using System.Collections;
 using System.Collections.Generic;
-using Maze_Game.Core;
 using UnityEngine;
 using UnityEngine.UI;
 using Maze_Game.Saving;
 using UnityEngine.SceneManagement;
+using Maze_Game.Core;
 
 namespace Maze_Game.UI
 {
@@ -17,6 +17,8 @@ namespace Maze_Game.UI
     public Image _purpleImage;
     public Image _pinkImage;
 
+    public Image _areYouSureScreen;
+
     public bool redKeyCollected;
     public bool greenKeyCollected;
     public bool blueKeyCollected;
@@ -24,6 +26,8 @@ namespace Maze_Game.UI
     public bool pinkKeyCollected;
 
     public bool imageCollected = false;
+
+    public bool isAreYouSureScreenOpen = false;
 
     void Start()
     {
@@ -35,29 +39,27 @@ namespace Maze_Game.UI
                 purpleKeyCollected = SaveManager.instance.activeSave._hasPurpleKeyDataUI;
                 pinkKeyCollected = SaveManager.instance.activeSave._hasPinkKeyDataUI;
             }
-        Cursor.visible = false;
-        Cursor.lockState = CursorLockMode.Locked;
     }
 
         void Update()
-        {      
+        {
             _redImage.gameObject.SetActive(redKeyCollected);
             _greenImage.gameObject.SetActive(greenKeyCollected);
             _blueImage.gameObject.SetActive(blueKeyCollected);
-            _purpleImage.gameObject.SetActive(purpleKeyCollected); 
+            _purpleImage.gameObject.SetActive(purpleKeyCollected);
             _pinkImage.gameObject.SetActive(pinkKeyCollected);
 
-            if(Input.GetKeyDown(KeyCode.Tab))
+            if (Input.GetKeyDown(KeyCode.Tab))
             {
                 KeysButtonPressed();
-            } 
+            }
 
-            
+
             // pressing esc toggles between hide/show
-            if (Input.GetKeyDown(KeyCode.Escape))
+            if (Input.GetKeyDown(KeyCode.Escape) && !isAreYouSureScreenOpen)
             {
-                LoadMainMenu();
-            }   
+                OpenAreYouSureScreen();
+            }        
         }
 
         public void KeysButtonPressed()
@@ -140,6 +142,22 @@ namespace Maze_Game.UI
         }
         SaveManager.instance.activeSave._hasPinkKeyDataUI = pinkKeyCollected;      
     }
+
+        public void OpenAreYouSureScreen()
+        {
+            isAreYouSureScreenOpen = true;
+            Cursor.visible = true;
+            Cursor.lockState = CursorLockMode.None;
+            _areYouSureScreen.gameObject.SetActive(true);           
+        }
+
+        public void CloseAreYouSureScreen()
+        {
+            isAreYouSureScreenOpen = false;
+            Cursor.visible = false;
+            Cursor.lockState = CursorLockMode.Locked;
+            _areYouSureScreen.gameObject.SetActive(false);
+        }
 
         public void LoadMainMenu()
         {
